@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block title %}Stock{% endblock %} {% block content
+    %}
+    <head>
+        <title>Kurs akcji {{ symbol }}</title>
+    </head>
+    <body>
+        <h1>Kurs akcji {{ symbol }}: ${{ price }}</h1>
+        <a href="/">Wróć do wyboru akcji</a>
+    </body>
+    {% endblock %}
