@@ -1,11 +1,71 @@
 {% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
 
-<h1 align="center">Stocks</h1>
+<!-- <h1 align="center">Stocks</h1>
 <h1>Wybierz akcję:</h1>
 	<form action="/stock">
 		<input type="text" name="symbol" placeholder="Symbol akcji">
 		<input type="submit" value="Wyświetl">
-	</form>
+	</form> -->
+
+	<!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Data</title>
+</head>
+<body>
+    <h1>Select or Enter a Stock Symbol</h1>
+    <form method="POST">
+        <label for="stock_symbol">Stock Symbol:</label>
+        <select name="stock_symbol" id="stock_symbol">
+            <option value="" disabled selected>Select an option</option>
+            <option value="AAPL">Apple Inc. (AAPL)</option>
+            <option value="GOOGL">Alphabet Inc. (GOOGL)</option>
+            <option value="MSFT">Microsoft Corporation (MSFT)</option>
+            <option value="AMZN">Amazon.com, Inc. (AMZN)</option>
+            <option value="FB">Facebook, Inc. (FB)</option>
+            <option value="TSLA">Tesla, Inc. (TSLA)</option>
+            <option value="NVDA">NVIDIA Corporation (NVDA)</option>
+            <option value="JPM">JPMorgan Chase & Co. (JPM)</option>
+            <option value="V">Visa Inc. (V)</option>
+            <option value="JNJ">Johnson & Johnson (JNJ)</option>
+            <option value="PYPL">PayPal Holdings, Inc. (PYPL)</option>
+            <option value="DIS">The Walt Disney Company (DIS)</option>
+            <option value="NFLX">Netflix, Inc. (NFLX)</option>
+            <option value="ADBE">Adobe Inc. (ADBE)</option>
+            <option value="COST">Costco Wholesale Corporation (COST)</option>
+            <option value="NKE">Nike, Inc. (NKE)</option>
+            <option value="CRM">Salesforce.com, inc. (CRM)</option>
+            <option value="VZ">Verizon Communications Inc. (VZ)</option>
+            <option value="INTC">Intel Corporation (INTC)</option>
+            <option value="PG">Procter & Gamble Company (PG)</option>
+            <option value="WMT">Walmart Inc. (WMT)</option>
+            <option value="BAC">Bank of America Corporation (BAC)</option>
+            <option value="KO">The Coca-Cola Company (KO)</option>
+            <option value="PFE">Pfizer Inc. (PFE)</option>
+            <option value="CMCSA">Comcast Corporation (CMCSA)</option>
+            <option value="IBM">International Business Machines Corporation (IBM)</option>
+            <option value="BA">The Boeing Company (BA)</option>
+            <option value="CVX">Chevron Corporation (CVX)</option>
+            <option value="CSCO">Cisco Systems, Inc. (CSCO)</option>
+            <option value="CAT">Caterpillar Inc. (CAT)</option>
+            <option value="PEP">PepsiCo, Inc. (PEP)</option>
+            <option value="ABBV">AbbVie Inc. (ABBV)</option>
+            <option value="HD">The Home Depot, Inc. (HD)</option>
+            <option value="MRK">Merck & Co., Inc. (MRK)</option>
+            <option value="BA">The Boeing Company (BA)</option>
+            <option value="DIS">The Walt Disney Company (DIS)</option>
+        </select>
+        <br>
+        <label for="custom_symbol">Or enter a custom symbol:</label>
+        <input type="text" name="custom_symbol" id="custom_symbol">
+        <br>
+        <input type="submit" value="Get Stock Data">
+    </form>
+    {% if error_message %}
+        <p>{{ error_message }}</p>
+    {% endif %}
+</body>
+</html>
 {% endblock %}
 
 

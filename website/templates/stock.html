@@ -1,10 +1,24 @@
 {% extends "base.html" %} {% block title %}Stock{% endblock %} {% block content
     %}
-    <head>
+    <!-- <head>
         <title>Kurs akcji {{ symbol }}</title>
     </head>
     <body>
         <h1>Kurs akcji {{ symbol }}: ${{ price }}</h1>
         <a href="/">Wróć do wyboru akcji</a>
-    </body>
+    </body> -->
+    <!DOCTYPE html>
+<html>
+<head>
+    <title>Stock Data</title>
+</head>
+<body>
+    <h1>Stock Data for {{ stock_data['Stock Symbol'] }}</h1>
+    <p>Stock Price: {{ stock_data['Stock Price'] }}</p>
+    <p>Closing Price: {{ stock_data['Closing Price'] }}</p>
+    <p>52-Week Range: {{ stock_data['52-Week Range'] }}</p>
+    <p>Analyst Rating: {{ stock_data['Analyst Rating'] }}</p>
+	<a href="/">return to stock selection</a>
+</body>
+</html>
     {% endblock %}
