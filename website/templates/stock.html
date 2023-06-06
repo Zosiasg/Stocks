@@ -13,12 +13,38 @@
     <title>Stock Data</title>
 </head>
 <body>
-    <h1>Stock Data for {{ stock_data['Stock Symbol'] }}</h1>
-    <p>Stock Price: {{ stock_data['Stock Price'] }}</p>
-    <p>Closing Price: {{ stock_data['Closing Price'] }}</p>
-    <p>52-Week Range: {{ stock_data['52-Week Range'] }}</p>
-    <p>Analyst Rating: {{ stock_data['Analyst Rating'] }}</p>
-	<a href="/">return to stock selection</a>
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body text-center">
+              <h3 class="card-title">Stock Data for {{ stock_data['Stock Symbol'] }}</h3>
+              <div class="row">
+                <div class="col-6">
+                  <p class="fw-semibold">Stock Price:</p>
+                  <p class="fw-normal">{{ stock_data['Stock Price'] }}</p>
+                </div>
+                <div class="col-6">
+                  <p class="fw-semibold">Closing Price:</p>
+                  <p class="fw-normal">{{ stock_data['Closing Price'] }}</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-6">
+                  <p class="fw-semibold">52-Week Range:</p>
+                  <p class="fw-normal">{{ stock_data['52-Week Range'] }}</p>
+                </div>
+                <div class="col-6">
+                  <p class="fw-semibold">Analyst Rating:</p>
+                  <p class="fw-normal">{{ stock_data['Analyst Rating'] }}</p>
+                </div>
+              </div>
+              <a href="/" class="btn btn-primary">Return to Stock Selection</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      
 </body>
 </html>
     {% endblock %}
