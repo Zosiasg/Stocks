@@ -2,9 +2,10 @@
 Dokumentacja projektu - Portal sprawdzający kursy akcji
 Autorzy: [Zofia Syrek-Gerstenkorn, Alena Mikhalkiewicz] Data: [06.06.2023]
 
-Wprowadzenie
+#Wprowadzenie
 Projekt "Portal sprawdzający kursy akcji" jest aplikacją webową napisaną w języku Python z wykorzystaniem frameworku Flask. Aplikacja umożliwia użytkownikom sprawdzanie kursów akcji na podstawie informacji pobieranych ze strony https://www.marketwatch.com/investing/stock/. Użytkownicy mają możliwość logowania i rejestracji, a następnie mogą wybrać akcję z listy lub wpisać symbol akcji, która ich interesuje. Po wybraniu akcji, użytkownik otrzymuje informacje takie jak Stock Price, Closing Price, 52-Week Range oraz Analyst Rating.
-Jak uruchomić projekt
+
+#Jak uruchomić projekt
 Aby uruchomić projekt, należy postępować zgodnie z poniższymi krokami:
 1.	Sklonuj repozytorium projektu (https://github.com/Zosiasg/Stocks.git) na swój lokalny komputer.
 2.	Upewnij się, że masz zainstalowaną najnowszą wersję Pythona na swoim systemie.
@@ -16,7 +17,7 @@ python app.py
 lub przyciskiem: run python file
 6.	Aplikacja zostanie uruchomiona
 
-Informacje o bibliotekach
+#Informacje o bibliotekach
 Projekt wykorzystuje następujące biblioteki:
 1.	Flask - framework webowy napisany w języku Python, służący do budowy aplikacji internetowych.
 2.	Sqlite - baza danych wbudowana w Pythona, służąca do przechowywania informacji o użytkownikach i akcjach.
@@ -24,14 +25,14 @@ Projekt wykorzystuje następujące biblioteki:
 4.	Beautiful Soup - biblioteka do parsowania i ekstrakcji danych z plików HTML i XML.
 5.	Requests - biblioteka do wykonywania żądań HTTP.
 
-Opis modułów
+#Opis modułów
 1.	main.py - główny moduł aplikacji, uruchamiający aplikację
 2.	models.py - moduł zawierający definicje klas modeli używanych do przechowywania danych w bazie danych.
 3.	views.py - moduł zawierający kod odpowiedzialny za pobieranie informacji o kursach akcji ze strony https://www.marketwatch.com/investing/stock/.
 4.	templates/ - folder zawierający szablony HTML używane do wyświetlania interfejsu użytkownika.
 5.	static/ - folder zawierający pliki statyczne, takie jak arkusze stylów CSS czy skrypty JavaScript.
 
-Opis kodu w module views.py
+#Opis kodu w module views.py
 Moduł views.py zawiera implementację funkcji obsługujących widoki aplikacji. Poniżej został opisany przepływ danych oraz funkcjonalność poszczególnych części kodu.
 Importowane biblioteki
 •	Blueprint - klasa z modułu flask, służąca do definiowania grupy widoków dla aplikacji.
